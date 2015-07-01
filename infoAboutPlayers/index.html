@@ -1,0 +1,62 @@
+﻿<html>
+	<head>
+		<script src="combinations.js"></script>
+		<script src="init.js"></script>
+		<script src="jquery.js"></script>
+		<style>
+			.card{
+				margin:5px;
+				float:left;
+				display:block;
+				width:75px;
+				height:100px;
+				text-align:center;
+				line-height:100px;
+				cursor:pointer;
+				
+			}
+			.Ղառ{
+				background:silver;
+				border:1px solid black;
+			}
+			.Խաչ{
+				background:silver;
+				border:1px solid black;
+			}
+			.Քյափ{
+				background:white;
+				border:1px solid black;
+			}
+			.Սիրտ{
+				background:white;
+				border:1px solid black;
+			}
+			.row{
+				position:relative;
+			}
+		</style>
+		<script>
+			$(function(){
+				resetGame = new Game();
+				resetGame.init();
+			});
+		</script>
+	</head>
+	<body>
+		<div id="cardDiv"></div>
+		<input type="button" onclick="resetGame = new Game();resetGame.init();" value="Նոր խաղ">
+		Սեղանի խաղացողների քանակը: <input type="text" id="playersCount" onkeyup="resetGame.countOfPlayers = parseInt($(this).val());resetGame.calculate();" value="10">
+		Բիգ բլայնդից առաջ որերորդ խաղացողնեք: <input type="text" id="position" onkeyup="resetGame.myPosition = parseInt($(this).val());resetGame.calculate();" value="1"><br><br>
+		<div>
+			Պրեֆլոպ
+		</div>
+		Առաջին քար:<input type="text" id="type1"  disabled="disabled"><br>
+		Երկրորդ քար:<input type="text" id="type2"  disabled="disabled"><br>
+		<input type="button" value="Ընտրել նոր քարեր" onclick="resetGame.resetCards();">
+		<input type="button" value="Հաշվել" onclick="resetGame.calculate();">
+		
+		<div id="result">
+			
+		</div>
+	</body>
+</html>

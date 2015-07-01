@@ -1,0 +1,1 @@
+ALTER TABLE virtual_sectors ADD name varchar(100);

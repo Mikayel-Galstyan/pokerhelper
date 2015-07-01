@@ -1,0 +1,13 @@
+.forSwitcher{
+	float:right !important;
+	margin-right:5px;
+}
+.forSwitcher>a{
+	display:block;
+	width:120px;
+	height:100%;
+	float:right;
+	color:#7a7a7a;
+	cursor:pointer;
+	margin-right:5px;
+}

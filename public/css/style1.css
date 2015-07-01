@@ -1,0 +1,229 @@
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+    border: 0 none;
+    font-family: inherit;
+    font-size: 100%;
+    font-style: inherit;
+    font-weight: inherit;
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+}
+body {
+    background-color:#ffffff;
+    color: #333333;
+    font: 75%/1.5 "myriad pro",helvetica,arial,sans-serif;
+    min-width:1370px;
+}
+table {
+    border-collapse: separate;
+    border-spacing: 0;
+}
+caption, th, td {
+    font-weight: normal;
+    text-align: left;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+    content: "";
+}
+blockquote, q {
+    quotes: "" "";
+}
+li {
+    list-style-type: none;
+}
+hr {
+    display: none;
+}
+strong, b {
+    font-weight: bold;
+}
+em, i {
+    font-style: italic;
+}
+a {
+    color: #333333;
+    text-decoration: none;
+}
+a.alt, .altbox .content a {
+    border-color: #DDECC1;
+    color: #386B00;
+}
+a:hover, a:active, a:focus, a.alt:hover, a.alt:active, a.alt:focus, .altbox .content a:hover, .altbox .content a:active, .altbox .content a:focus {
+    border-color: #CEEC96;
+    color: #59AA00;
+}
+a img {
+    border: medium none;
+}
+.cw {
+    overflow: hidden;
+    width: 100%;
+}
+.cw2 {
+    height: 1%;
+    overflow: hidden;
+}
+.cleaner {
+    clear: both;
+    font-size: 0;
+    height: 0;
+    line-height: 0;
+    overflow: hidden;
+    visibility: hidden;
+}
+.clearfix:after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+.ir {
+    display: block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+.tl {
+    text-align: left !important;
+}
+.tr {
+    text-align: right !important;
+}
+.tc {
+    text-align: center !important;
+}
+.ttop {
+    vertical-align: top !important;
+}
+.hand {
+    cursor: pointer;
+}
+.a-hidden {
+    position: absolute;
+    top: -10000em;
+}
+.first {
+    border-left: 0 none !important;
+}
+.last {
+    border-right: 0 none !important;
+}
+.inner-container {
+    margin: 0 auto;
+    width: 960px;
+}
+#header {
+    background: url("../images/backgrounds/header_bg.png") repeat scroll 0 0 #3b3d3c;
+    border-bottom: 9px solid #72b14c;
+    min-height: 107px;
+    height: 107px;
+}
+#header .inner-container {
+    margin: 0;
+    width: 100%;
+    height:100%;
+}
+#header div.logo {
+    float: left;
+    width: 168px;
+    height: 100%;
+    position: relative;
+    border-right: 1px solid #464847;
+}
+#header div.logo a {
+	background: url("../images/logos/logo.png") no-repeat scroll 0 0 transparent;
+    border: 0 none;
+    display: block;
+    width: 83px;
+    height: 84px;
+    margin: 12px 0 0 43px;
+}
+
+#header div.slogan {
+    float: left;
+    width: 409px;
+    height: 100%;
+    position: relative;
+    border-right: 1px solid #464847;
+}
+
+#header div.slogan span {
+	display: block;
+	width: 342px;
+    height: 57px;
+	background-image: url("../images/logos/teeflow.png"), url("../images/logos/slogan.png");
+	background-position: left top, left bottom;
+	background-repeat: no-repeat;
+    margin: 26px 0 0 32px;
+}
+
+#header div.language {
+    float: right;
+    width: 74px;
+    height: 100%;
+    position: relative;
+    background-color: #414342;
+    border-right: 1px solid #3c3e3e;
+    border-left: 1px solid #464847;
+}
+
+#header div.username {
+    float: right;
+    height: 100%;
+    position: relative;
+    background-color: #414342;
+    border-right: 1px solid #464847;
+    border-left: 1px solid #464847;
+}
+
+#header div.username span {
+	display: block;
+    heght: 16px;
+    color: #8e8e8e;
+    font-size: 16px;
+    line-height:24px;
+    margin: 41px 30px;
+}
+
+#header div.logout {
+    float: right;
+    width: 67px;
+    height: 100%;
+    position: relative;
+    background-color: #414342;
+    border-left: 1px solid #3b3d3c;
+}
+
+#header div.logout a{
+    display: block;
+    width: 27px;
+    height: 28px;
+    background: url("../images/icons/logout.png") no-repeat scroll 0 0 transparent;
+    margin: 40px 23px;
+}
+
+.fieldset-custom {
+	border: 1px solid #cccccc;
+	padding: 10px;
+}
+.fieldset-custom legend {
+	padding: 0 5px 0 5px;
+}
+
+.table-list {
+	border-collapse: collapse;
+	border: 1px solid #cccccc;
+}
+.table-list th, .table-list td {
+	padding: 8px;
+}
+.table-list th {
+	border-bottom: 1px solid #cccccc;
+	font-size: 14px;
+	color: #666666;
+	background-color: #eeeeee;
+}

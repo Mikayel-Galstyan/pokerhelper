@@ -1,0 +1,232 @@
+.game_control {
+	top: 557px;
+	left: 27px;
+	background: url(../images/game/prev.png),url(../images/game/mediaButtons.png),url(../images/game/next.png);
+    background-repeat:no-repeat,no-repeat;
+    background-position: 0px 0px,30px 0px,172px 0px;
+    background-size: 27px 26px,140px 26px, 27px 26px;
+	height: 26px;
+	width: 200px;
+	position: absolute;
+	z-index: 100;
+}
+
+.game_control a{
+	float:left;
+    height: 26px;
+    width: 26px;
+    text-indent: -999em;
+    margin-left:2px;
+}
+
+.game_control a:hover {
+	cursor: pointer;
+}
+
+.game_status_bar {
+    height: 26px;
+    position: absolute;
+    background-color: black;
+    z-index: 100;
+    right: 10px;
+    bottom: 10px;
+    color: white;
+    font-size: 12px;
+    line-height: 26px;
+}
+.game_status_bar div {
+	float:left;
+    height: 100%;
+}
+
+.status {
+    
+    margin: 0px 8px 0px 8px;
+}
+
+.time {
+    margin: 0px 8px;
+}
+
+.speed {
+
+	float: left;
+    height: 100%;
+    margin-right: 8px;
+}
+.bgRed{
+    background:red;
+}
+.labelForPlayers{
+    color:white;
+    font-size:10px;
+	display:block;
+    padding:1px;
+	width:40px;
+	line-height:1.7em;
+	margin-left:-5px;
+    
+}
+.bgGreen{
+    background:green;
+}
+    
+.bgOrange{
+    background:orange;
+}
+
+.examplePoint{
+    position:absolute;
+    background:black;
+    border-radius:5px;
+    height:4px;
+    width:4px;
+}
+
+.timeLimit{
+	width:27px;
+	height:25px;
+	background-image:url(../images/game/timeLimit.png) !important;
+}
+.strokDistance{
+	width:27px;
+	height:25px;
+	background-image:url(../images/game/waitingTime.png) !important;
+}
+.player{
+	width:27px;
+	height:25px;
+	background-image:url(../images/game/player.png);
+    cursor:pointer !important;
+	
+}
+.polygonOut{
+	width:27px;
+	height:25px;
+	background-image:url(../images/game/polygonOut.png) !important;
+}
+.sectorJump{
+	width:27px;
+	height:25px;
+	background-image:url(../images/game/sectorJump.png) !important;
+}
+.directWaitingTime{
+	width:27px;
+	height:25px;
+	background-image:url(../images/game/waitingTime.png) !important;
+}
+.indirectWaitingTime{
+   
+}
+
+.batteryLow{
+    width:25px;
+	height:23px;
+	background-image:url(../images/game/baterylow.png) !important;
+}
+
+.wrongOrderPlayer{
+    width:25px;
+	height:25px;
+	background-image:url(../images/game/wrongOrderPlayer.png) !important;
+}
+
+.waitingLabel{
+    position:absolute;
+    background:white;
+    color:rgb(143, 143, 143);
+    padding:1px;
+    cursor:pointer !important;
+}
+
+.waitingLabel:hover{
+    background:aqua;
+    color:black;
+}
+
+.chfh{
+    width:28px;
+	height:25px;
+	background-image:url(../images/game/chfh.png) !important;
+	background-size:28px 25px;
+	background-repeat:no-repeat;
+	background-position:1.7px -1px;
+}
+.chfl{
+    width:28px;
+	height:25px;
+	background-image:url(../images/game/chfl.png) !important;
+	background-size:28px 25px;
+	background-repeat:no-repeat;
+	background-position:1.7px -1px;
+}
+.chfn{
+    width:28px;
+	height:25px;
+	background-image:url(../images/game/chfn.png) !important;
+	background-size:28px 25px;
+	background-repeat:no-repeat;
+	background-position:1.8px -1px;
+}
+.clfh{
+    width:28px;
+	height:25px;
+	background-image:url(../images/game/clfh.png) !important;
+	background-size:28px 25px;
+	background-repeat:no-repeat;
+	background-position:1.7px -1px;
+}
+.clfl{
+    width:28px;
+	height:25px;
+	background-image:url(../images/game/clfl.png) !important;
+	background-size:28px 25px;
+	background-repeat:no-repeat;
+	background-position:1.7px -1px;
+}
+.clfn{
+    width:28px;
+	height:25px;
+	background-image:url(../images/game/clfn.png) !important;
+	background-size:28px 25px;
+	background-repeat:no-repeat;
+	background-position:1.7px -1px;
+}
+.cnfh{
+    width:28px;
+	height:25px;
+	background-image:url(../images/game/cnfh.png) !important;
+	background-size:28px 25px;
+	background-repeat:no-repeat;
+	background-position:1.2px -1px;
+}
+.cnfl{
+    width:28px;
+	height:25px;
+	background-image:url(../images/game/cnfl.png) !important;
+	background-repeat:no-repeat;
+	background-position:1.7px -1px;
+	background-size:28px 25px;
+}
+.cnfn{
+    width:28px;
+	height:25px;
+	background-image:url(../images/game/cnfn.png);
+	background-size:28px 25px;
+	background-repeat:no-repeat;
+	background-position:1.5px -1px;
+}
+.missing{
+    width:28px;
+	height:25px;
+	background-image:url(../images/game/query.png);
+	background-size:28px 25px;
+}
+.help{
+    width:28px;
+	height:25px;
+	background-image:url(../images/game/help.png);
+	background-size:28px 25px;
+}
+
+

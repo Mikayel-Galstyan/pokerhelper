@@ -1,0 +1,2 @@
+INSERT INTO `teeflow`.`settings`(`id`,`name`,`value`,`title`,`long_description`) VALUES ( NULL,'daimfi','5','desired accuracy in meters for ios','desired accuracy in meters for ios'); 
+CREATE TABLE `teeflow`.`devices`( `id` INT(11) NOT NULL AUTO_INCREMENT , `app_id` VARCHAR(255) , `token` VARCHAR(255) , `date` TIMESTAMP , PRIMARY KEY (`id`) ); 

@@ -1,0 +1,1 @@
+ALTER TABLE players ADD finalized INT(1) NOT NULL DEFAULT 0

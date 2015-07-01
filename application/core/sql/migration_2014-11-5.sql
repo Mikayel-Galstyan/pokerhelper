@@ -1,0 +1,2 @@
+INSERT INTO `db00063143`.`messages`(`id`,`type`,`message`,`active`,`message_marshal`) VALUES ( NULL,'missing_device',NULL,'0',NULL);
+ALTER TABLE `db00063143`.`players`    ADD COLUMN `current_battery` FLOAT NULL AFTER `last_update_time`;

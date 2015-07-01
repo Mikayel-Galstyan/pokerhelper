@@ -1,0 +1,27 @@
+<?php 
+    $formatting = $this->getHelper('DataFormatting');    
+?>
+<div class="headerPop">
+    <div class="fl ml12 mt5"><?php echo ($this->club?$this->translate('edit').' '.$this->club['name']:$this->translate(array('add','Website'))); ?></div>
+        <a class="closebtnPop" onclick="$('.pop').hide(); Button.enableAdd(); return false" title="<?php echo $this->translate('close');?>"></a>
+</div>
+<div class="contentPop">
+    <form action="website/save" method="POST" id="ajaxForm" onsubmit="Form.submit('ajaxForm');return false;" class="ml20">
+        <input type="hidden" class="textInput w190" name="id" value="<?php echo ($this->club?$this->club['id']:''); ?>"/>
+        <table class="table_edit">
+            <tbody>
+                <tr>
+                    <td>
+                        <label class="pl18" for="clubeName" style=""><?php echo $this->translate(array('website','name')).' '.$formatting->markAsRequired(); ?> </label>
+                    </td>
+                    <td>
+                        <input type="text" class="textInput w190" name="name" value="<?php echo ($this->club?$this->club['name']:''); ?>"/>
+                    </td>
+                    
+                </tr>
+               
+            </tbody>
+        </table>
+        <input type="button" class="green mr12 mt8 mb14 mt20" onclick="Form.submit('ajaxForm');" value="<?php echo $this->translate('save');?>" title="<?php echo $this->translate(array('save', 'club'));?>">
+    </form>    
+</div>

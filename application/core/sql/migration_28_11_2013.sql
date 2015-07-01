@@ -1,0 +1,1 @@
+INSERT INTO `settings` (`id`, `name`, `value`,`title`) VALUES (54, 'adbp', '160','allowed de?ection bag parked');

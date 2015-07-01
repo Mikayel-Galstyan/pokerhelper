@@ -1,0 +1,2 @@
+ALTER TABLE `teeflow`.`users` CHANGE `first_name` `name` VARCHAR(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL; 
+ALTER TABLE `teeflow`.`courses` ADD COLUMN `marshal_id` INT NULL AFTER `start_time`; 

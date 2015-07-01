@@ -1,0 +1,1 @@
+ALTER TABLE `teeflow`.`job_table`    ADD COLUMN `simulated` INT(1) DEFAULT '0' NULL AFTER `calculated`;

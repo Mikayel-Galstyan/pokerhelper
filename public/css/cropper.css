@@ -1,0 +1,12 @@
+.cropper {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+    border: 3px dashed #dadad6;
+}
+
+.cropper_moving {
+	cursor: -webkit-grabbing !important;
+	cursor: -moz-grabbing !important;
+}
+
