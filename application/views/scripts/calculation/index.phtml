@@ -1,0 +1,50 @@
+
+<style>
+	.card{
+		margin:5px;
+		float:left;
+		display:block;
+		width:75px;
+		height:100px;
+		text-align:center;
+		line-height:100px;
+		cursor:pointer;
+		
+	}
+	.xar{
+		background:silver;
+		border:1px solid black;
+	}
+	.xach{
+		background:silver;
+		border:1px solid black;
+	}
+	.qyap{
+		background:white;
+		border:1px solid black;
+	}
+	.sirt{
+		background:white;
+		border:1px solid black;
+	}
+	.row{
+		position:relative;
+	}
+</style>
+<table>
+
+<?php 
+	foreach($this->cards as $key=>$value){
+	?>
+<tr>	
+<?php
+		foreach($value as $key2=>$value2){
+?>
+<td><a class="<?php echo $key ?> card"><?php echo $key." ".$key2 ?></a></td>
+<?php 
+	}
+?>
+</tr>
+<?php
+}
+?>

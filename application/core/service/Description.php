@@ -38,6 +38,5 @@ class Service_Description extends TF_Service_Base {
 	public function getCountByFilter($filter) {
         $domains = $this->dao->getCountByFilter($filter);
         return $domains;
-    }
-    
+    }   
 }

@@ -21,7 +21,7 @@ class Dao_Description extends TF_Dao_Base {
 	public function &getByFilter($filter) {
     	$select = $this->dbTable->select()
     	->from(array(Dao_DbTable_List::DESCRIPTION => Dao_DbTable_List::DESCRIPTION))->order('id ASC');
-    	if($filter->getName()){
+    	if($filter->getUserId()){
     		$select->where('user_id = ?', $filter->getUserId());
     	}
 		if($filter->getTurnamentId()){
@@ -37,8 +37,8 @@ class Dao_Description extends TF_Dao_Base {
     	$select = $this->dbTable->select()
     	->from(array(Dao_DbTable_List::DESCRIPTION => Dao_DbTable_List::DESCRIPTION),
     			array('count(id) AS count'));
-    	if($filter->getName()){
-    		$select->where('name = ?', $filter->getName());
+    	if($filter->getUserId()){
+    		$select->where('user_id = ?', $filter->getUserId());
     	}
 		if($filter->getTurnamentId()){
     		$select->where('turnament_id = ?', $filter->getTurnamentId());

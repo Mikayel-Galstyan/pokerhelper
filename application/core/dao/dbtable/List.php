@@ -7,5 +7,6 @@ class Dao_DbTable_List {
 	const WEBSITE      = 'website';
 	const USERS        = 'users';
 	const DESCRIPTION  = 'description';
+	const CARDS  = 'cards';
 
 }

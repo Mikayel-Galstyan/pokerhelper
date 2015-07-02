@@ -1,0 +1,56 @@
+INSERT INTO `pokerhelper`.`cards`(`id`,`type`,`card`,`image`,`order`) VALUES ( NULL,'sirt','2',NULL,'13');
+INSERT INTO `pokerhelper`.`cards`(`id`,`type`,`card`,`image`,`order`) VALUES ( NULL,'sirt','3',NULL,'12');
+INSERT INTO `pokerhelper`.`cards`(`id`,`type`,`card`,`image`,`order`) VALUES ( NULL,'sirt','4',NULL,'11');
+INSERT INTO `pokerhelper`.`cards`(`id`,`type`,`card`,`image`,`order`) VALUES ( NULL,'sirt','5',NULL,'10');
+INSERT INTO `pokerhelper`.`cards`(`id`,`type`,`card`,`image`,`order`) VALUES ( NULL,'sirt','6',NULL,'9');
+INSERT INTO `pokerhelper`.`cards`(`id`,`type`,`card`,`image`,`order`) VALUES ( NULL,'sirt','7',NULL,'8');
+INSERT INTO `pokerhelper`.`cards`(`id`,`type`,`card`,`image`,`order`) VALUES ( NULL,'sirt','8',NULL,'7');
+INSERT INTO `pokerhelper`.`cards`(`id`,`type`,`card`,`image`,`order`) VALUES ( NULL,'sirt','9',NULL,'6');
+INSERT INTO `pokerhelper`.`cards`(`id`,`type`,`card`,`image`,`order`) VALUES ( NULL,'sirt','10',NULL,'5');
+INSERT INTO `pokerhelper`.`cards`(`id`,`type`,`card`,`image`,`order`) VALUES ( NULL,'sirt','J',NULL,'4');
+INSERT INTO `pokerhelper`.`cards`(`id`,`type`,`card`,`image`,`order`) VALUES ( NULL,'sirt','Q',NULL,'3');
+INSERT INTO `pokerhelper`.`cards`(`id`,`type`,`card`,`image`,`order`) VALUES ( NULL,'sirt','K',NULL,'2');
+INSERT INTO `pokerhelper`.`cards`(`id`,`type`,`card`,`image`,`order`) VALUES ( NULL,'sirt','A',NULL,'1');
+
+INSERT INTO `pokerhelper`.`cards`(`id`,`type`,`card`,`image`,`order`) VALUES ( NULL,'qyap','2',NULL,'13');
+INSERT INTO `pokerhelper`.`cards`(`id`,`type`,`card`,`image`,`order`) VALUES ( NULL,'qyap','3',NULL,'12');
+INSERT INTO `pokerhelper`.`cards`(`id`,`type`,`card`,`image`,`order`) VALUES ( NULL,'qyap','4',NULL,'11');
+INSERT INTO `pokerhelper`.`cards`(`id`,`type`,`card`,`image`,`order`) VALUES ( NULL,'qyap','5',NULL,'10');
+INSERT INTO `pokerhelper`.`cards`(`id`,`type`,`card`,`image`,`order`) VALUES ( NULL,'qyap','6',NULL,'9');
+INSERT INTO `pokerhelper`.`cards`(`id`,`type`,`card`,`image`,`order`) VALUES ( NULL,'qyap','7',NULL,'8');
+INSERT INTO `pokerhelper`.`cards`(`id`,`type`,`card`,`image`,`order`) VALUES ( NULL,'qyap','8',NULL,'7');
+INSERT INTO `pokerhelper`.`cards`(`id`,`type`,`card`,`image`,`order`) VALUES ( NULL,'qyap','9',NULL,'6');
+INSERT INTO `pokerhelper`.`cards`(`id`,`type`,`card`,`image`,`order`) VALUES ( NULL,'qyap','10',NULL,'5');
+INSERT INTO `pokerhelper`.`cards`(`id`,`type`,`card`,`image`,`order`) VALUES ( NULL,'qyap','J',NULL,'4');
+INSERT INTO `pokerhelper`.`cards`(`id`,`type`,`card`,`image`,`order`) VALUES ( NULL,'qyap','Q',NULL,'3');
+INSERT INTO `pokerhelper`.`cards`(`id`,`type`,`card`,`image`,`order`) VALUES ( NULL,'qyap','K',NULL,'2');
+INSERT INTO `pokerhelper`.`cards`(`id`,`type`,`card`,`image`,`order`) VALUES ( NULL,'qyap','A',NULL,'1');
+
+INSERT INTO `pokerhelper`.`cards`(`id`,`type`,`card`,`image`,`order`) VALUES ( NULL,'xach','2',NULL,'13');
+INSERT INTO `pokerhelper`.`cards`(`id`,`type`,`card`,`image`,`order`) VALUES ( NULL,'xach','3',NULL,'12');
+INSERT INTO `pokerhelper`.`cards`(`id`,`type`,`card`,`image`,`order`) VALUES ( NULL,'xach','4',NULL,'11');
+INSERT INTO `pokerhelper`.`cards`(`id`,`type`,`card`,`image`,`order`) VALUES ( NULL,'xach','5',NULL,'10');
+INSERT INTO `pokerhelper`.`cards`(`id`,`type`,`card`,`image`,`order`) VALUES ( NULL,'xach','6',NULL,'9');
+INSERT INTO `pokerhelper`.`cards`(`id`,`type`,`card`,`image`,`order`) VALUES ( NULL,'xach','7',NULL,'8');
+INSERT INTO `pokerhelper`.`cards`(`id`,`type`,`card`,`image`,`order`) VALUES ( NULL,'xach','8',NULL,'7');
+INSERT INTO `pokerhelper`.`cards`(`id`,`type`,`card`,`image`,`order`) VALUES ( NULL,'xach','9',NULL,'6');
+INSERT INTO `pokerhelper`.`cards`(`id`,`type`,`card`,`image`,`order`) VALUES ( NULL,'xach','10',NULL,'5');
+INSERT INTO `pokerhelper`.`cards`(`id`,`type`,`card`,`image`,`order`) VALUES ( NULL,'xach','J',NULL,'4');
+INSERT INTO `pokerhelper`.`cards`(`id`,`type`,`card`,`image`,`order`) VALUES ( NULL,'xach','Q',NULL,'3');
+INSERT INTO `pokerhelper`.`cards`(`id`,`type`,`card`,`image`,`order`) VALUES ( NULL,'xach','K',NULL,'2');
+INSERT INTO `pokerhelper`.`cards`(`id`,`type`,`card`,`image`,`order`) VALUES ( NULL,'xach','A',NULL,'1');
+
+
+INSERT INTO `pokerhelper`.`cards`(`id`,`type`,`card`,`image`,`order`) VALUES ( NULL,'xar','2',NULL,'13');
+INSERT INTO `pokerhelper`.`cards`(`id`,`type`,`card`,`image`,`order`) VALUES ( NULL,'xar','3',NULL,'12');
+INSERT INTO `pokerhelper`.`cards`(`id`,`type`,`card`,`image`,`order`) VALUES ( NULL,'xar','4',NULL,'11');
+INSERT INTO `pokerhelper`.`cards`(`id`,`type`,`card`,`image`,`order`) VALUES ( NULL,'xar','5',NULL,'10');
+INSERT INTO `pokerhelper`.`cards`(`id`,`type`,`card`,`image`,`order`) VALUES ( NULL,'xar','6',NULL,'9');
+INSERT INTO `pokerhelper`.`cards`(`id`,`type`,`card`,`image`,`order`) VALUES ( NULL,'xar','7',NULL,'8');
+INSERT INTO `pokerhelper`.`cards`(`id`,`type`,`card`,`image`,`order`) VALUES ( NULL,'xar','8',NULL,'7');
+INSERT INTO `pokerhelper`.`cards`(`id`,`type`,`card`,`image`,`order`) VALUES ( NULL,'xar','9',NULL,'6');
+INSERT INTO `pokerhelper`.`cards`(`id`,`type`,`card`,`image`,`order`) VALUES ( NULL,'xar','10',NULL,'5');
+INSERT INTO `pokerhelper`.`cards`(`id`,`type`,`card`,`image`,`order`) VALUES ( NULL,'xar','J',NULL,'4');
+INSERT INTO `pokerhelper`.`cards`(`id`,`type`,`card`,`image`,`order`) VALUES ( NULL,'xar','Q',NULL,'3');
+INSERT INTO `pokerhelper`.`cards`(`id`,`type`,`card`,`image`,`order`) VALUES ( NULL,'xar','K',NULL,'2');
+INSERT INTO `pokerhelper`.`cards`(`id`,`type`,`card`,`image`,`order`) VALUES ( NULL,'xar','A',NULL,'1');
