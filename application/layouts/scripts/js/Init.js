@@ -43,9 +43,6 @@ $(function(){
         
     	href = $this.attr('href');    	
     	if (href && href.length > 0){
-            Game.clearInterval();
-            LiveTest.clearInterval();
-            Live.clearInterval();
     		Url.push(href);    		    	
     	}        
         return false;

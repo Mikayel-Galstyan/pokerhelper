@@ -1,1 +1,90 @@
-<?php $this->setPageTitle('Teeflow - Home'); ?>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <?php 
+        $jsHelper = $this->getHelper('js');
+        $jsHelper->urlChecker();
+        echo $this->headMeta();        
+    ?>
+    <base href="<?php echo $this->baseUrl(); ?>" />
+	<title><?php echo $this->user['name']; ?></title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />   
+    <link rel="stylesheet" type="text/css" href="css/jqtransform.css" />
+	<link rel="stylesheet" type="text/css" href="css/pagination.css" />
+    <link href="images/favico.png" rel="shortcut icon" type="image/x-icon"/>    
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css">
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTL9gOJWA7Yg_sD4F0XpfGfnL1LupMMW0&sensor=false"> </script>
+    <?php
+    echo $this->headScript()
+    ->appendFile('js/jquery-1.8.2.min.js', 'text/javascript')
+    ->appendFile('js/jquery-ui-1.10.3.custom.min.js', 'text/javascript')    
+    ->appendFile('js/plugins/jquery.tablesorter.js', 'text/javascript')
+    ->appendFile('js/plugins/jquery.form.js', 'text/javascript')
+    ->appendFile('js/plugins/jquery.pnotify.min.js', 'text/javascript')
+    ->appendFile('js/plugins/history.js', 'text/javascript')
+    ->appendFile('js/plugins/jquery.maphilight.min.js', 'text/javascript')
+    ->appendFile('js/plugins/jquery.mousewheel.js', 'text/javascript')    
+    ->appendFile('js/plugins/jquery.jqtransform.js', 'text/javascript');        
+    ?>
+    <?php echo $this->action("index", "Jsmin"); ?>
+    </head>
+<body>
+    <div id="header">
+        <div class="inner-container">
+        </div>
+    </div>
+    <div class="page_wrapper" id="container">
+         <div class="content_wrapper">
+            <div class="content_container">
+                <div class="panel">
+						<div class="ml20 mt20 w1300">
+							<div class="h40">
+								<form id="ajaxFilter" action="users/list" method="post">
+									<select name="turnamentId" id="websiteId" class="styled w304  ml5  fl" data-classes="w305  ml5 fl" onchange='Form.changeAction("ajaxFilter","descriptions/list"); Filter.submit("ajaxFilter");'>
+										<option value=""><?php echo $this->translate(array('select','turnament type'));?></option>
+										<?php foreach ($this->turnaments as $club){?>
+										<option value="<?php echo $this->htmlEscape($club['id']);?>"><?php echo $this->htmlEscape($club['name']);?></option>
+										<?php } ?>                    
+									</select>
+									<input type="hidden" name="userId" class="textInput w190  fl ml5" value="<?php echo $this->userId; ?>" />
+									<a  id="" class="green  ml5" onclick='Form.changeAction("ajaxFilter","users/list"); Filter.submit("ajaxFilter");' title="<?php echo $this->translate(array('add', 'new', 'Website')); ?>"><?php echo $this->translate(array('search')); ?></a>
+								</form>
+							</div>
+							<table class="mt21 w1165">
+								<tbody>
+									<tr class="head">
+										<td> 
+											<table class="tlf">
+												<colgroup>
+													<col class="w48">
+													<col class="w120">
+													<col class="w75">
+													<col class="">
+												</colgroup>
+											   <thead class="tlf header_zebra">
+													<tr>
+														<th class="middle left" id="" title=""><span></span></th>
+														<th class="middle left bl0" title="<?php echo $this->translate('edit');?>"><span></span></th>                    
+														<th class="middle left header bl0 pl32" id="id" onclick="Grid.sort('id')" title="<?php echo $val= $this->translate('id'); ?>"><span><?php echo $val; ?></span></th>
+														<th class="middle left header bl0" id="name" onclick="Grid.sort('name')" title="<?php echo $val=$this->translate(array('user','description'));?>"><span><?php echo $val; ?></span></th>
+														<th class="middle left header bl0" id="name" onclick="Grid.sort('name')" title="<?php echo $val=$this->translate(array('user','stars'));?>"><span><?php echo $val; ?></span></th>
+													</tr>
+												</thead>
+											</table>
+										</td>
+									</tr>
+									<tr class='panel'>
+										<td><?php echo $this->action('list', 'descriptions',null,array('userId'=>$this->userId));?></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<?php echo $this->action('edit', 'descriptions',null,array('userId'=>$this->userId));?>
+					 </div>
+				</div>
+				<!--<div class="cl"></div> -->
+			</div>
+		</div> 
+	</body>
+</html>

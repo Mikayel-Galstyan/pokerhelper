@@ -5,7 +5,7 @@
  *
  * Class Filter_Info
  */
-class Filter_Info extends Filter_Order {
+class Filter_Info {
     /**
      *
      * @var datetime
@@ -26,7 +26,59 @@ class Filter_Info extends Filter_Order {
      * @var int
      */
     protected $websiteId = null;
+	/**
+     *
+     * @var int
+     */
+    protected $limit = null;
+	/**
+     *
+     * @var int
+     */
+    protected $page = null;
 
+	
+	
+	/**
+     * Return option dateFrom
+     *
+     * @return datetime
+     */
+    public function getPage() {
+        return $this->page;
+    }
+
+    /**
+     * Sets option datefFrom
+     *
+     * @param $val
+     * @return $this
+     */
+    public function &setPage($val) {
+        $this->page = $val;
+        return $this;
+    }
+	
+	
+	/**
+     * Return option dateFrom
+     *
+     * @return datetime
+     */
+    public function getLimit() {
+        return $this->limit;
+    }
+
+    /**
+     * Sets option datefFrom
+     *
+     * @param $val
+     * @return $this
+     */
+    public function &setLimit($val) {
+        $this->limit = $val;
+        return $this;
+    }
     /**
      * Return option dateFrom
      *

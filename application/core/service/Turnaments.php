@@ -32,9 +32,15 @@ class Service_Turnaments extends TF_Service_Base {
      * @return array
      */
     public function getByFilter($filter) {
-        $domains = $this->dao->getOrderedList($filter);
+        $domains = $this->dao->getByFilter($filter);
         return $domains;
     }
+	
+	public function getCountByFilter($filter) {
+        $domains = $this->dao->getCountByFilter($filter);
+        return $domains;
+    }
+	
 
    
 

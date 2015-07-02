@@ -20,16 +20,31 @@ class Dao_Description extends TF_Dao_Base {
 	
 	public function &getByFilter($filter) {
     	$select = $this->dbTable->select()
-    	->from(array(Dao_DbTable_List::TURNAMENTS => Dao_DbTable_List::TURNAMENTS),
-    			array('id AS id', 'name AS name'))->order($filter->getOrder().' '.$filter->getSort());
+    	->from(array(Dao_DbTable_List::DESCRIPTION => Dao_DbTable_List::DESCRIPTION))->order('id ASC');
     	if($filter->getName()){
     		$select->where('user_id = ?', $filter->getUserId());
     	}
-		if($filter->getWebsiteId()){
+		if($filter->getTurnamentId()){
     		$select->where('turnament_id = ?', $filter->getTurnamentId());
     	}
+		$select->limitPage($filter->getPage(), $filter->getLimit()); //echo $select;exit;
     	$items = $this->dbTable->fetchAll($select);
     	$items = &$this->getEntities($items);
     	return $items;
+    }
+	
+	public function &getCountByFilter($filter) {
+    	$select = $this->dbTable->select()
+    	->from(array(Dao_DbTable_List::DESCRIPTION => Dao_DbTable_List::DESCRIPTION),
+    			array('count(id) AS count'));
+    	if($filter->getName()){
+    		$select->where('name = ?', $filter->getName());
+    	}
+		if($filter->getTurnamentId()){
+    		$select->where('turnament_id = ?', $filter->getTurnamentId());
+    	}
+        $items = $this->dbTable->fetchRow($select);
+		$count = $items->count;
+    	return $count;
     }
 }

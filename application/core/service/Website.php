@@ -15,7 +15,7 @@ class Service_Website extends TF_Service_Base {
     private static $VALIDATION_CONFIG = array (
             'name' => array (
                     TF_Validation_Base::NOT_EMPTY,
-                    TF_Validation_Base::DB_NO_RECORD_EXISTS => array('table'=>Dao_DbTable_List::CLUBS, 'field' => 'name'))
+                    TF_Validation_Base::DB_NO_RECORD_EXISTS => array('table'=>Dao_DbTable_List::WEBSITE, 'field' => 'name'))
     );
     /**
      * The validator object used for input data validation
@@ -57,7 +57,7 @@ class Service_Website extends TF_Service_Base {
      * @return array
      */
     public function getByFilter($filter) {
-        $domains = $this->dao->getOrderedList($filter);
+        $domains = $this->dao->getByFilter($filter);
         return $domains;
     }
 

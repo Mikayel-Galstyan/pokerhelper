@@ -1,1 +1,57 @@
 <?php $this->setPageTitle('Teeflow - Home'); ?>
+<script>
+	$("#ajaxFilter").jqTransform();
+</script>
+<div class="mt20">
+	
+	
+	<div class="pop mt20 w760" id="editPop">
+	</div>
+</div>
+<div class="ml20 mt20 w1300">
+    <div class="h40">
+        <form id="ajaxFilter" action="users/list" method="post">
+            <select name="websiteId" id="websiteId" class="styled w304  ml5  fl" data-classes="w305  ml5 fl" onchange='Form.changeAction("ajaxFilter","users/list"); Filter.submit("ajaxFilter");'>
+                <option value=""><?php echo $this->translate(array('select','website'));?></option>
+                <?php foreach ($this->websites as $club){?>
+                <option value="<?php echo $this->htmlEscape($club['id']);?>"><?php echo $this->htmlEscape($club['name']);?></option>
+                <?php } ?>                    
+            </select>
+			<input type="text" name="name" class="textInput w190  fl ml5" placeholder="Insert name of player" />
+			<a  id="" class="green  ml5" onclick='Form.changeAction("ajaxFilter","users/list"); Filter.submit("ajaxFilter");' title="<?php echo $this->translate(array('add', 'new', 'Website')); ?>"><?php echo $this->translate(array('search')); ?></a>
+        </form>
+    </div>
+    <div class="mt11">
+        <a  id="add_button" class="button_add" onclick="CustomForm.editCourse('users/edit'); Button.disableAdd(); return false;" title="<?php echo $this->translate(array('add', 'new', 'Website')); ?>"><?php echo $this->translate(array('add','user')); ?></a>
+        <div class="pop mt20 r100"  id="editPop">
+        </div>
+    </div>
+    <table class="mt21 w1165">
+        <tbody>
+            <tr class="head">
+                <td> 
+                    <table class="tlf">
+                        <colgroup>
+                            <col class="w48">
+                            <col class="w120">
+                            <col class="w75">
+                            <col class="">
+                        </colgroup>
+                       <thead class="tlf header_zebra">
+                            <tr>
+                                <th class="middle left" id="" title=""><span></span></th>
+                                <th class="middle left bl0" title="<?php echo $this->translate('edit');?>"><span></span></th>                    
+                                <th class="middle left header bl0 pl32" id="id" onclick="Grid.sort('id')" title="<?php echo $val= $this->translate('id'); ?>"><span><?php echo $val; ?></span></th>
+                                <th class="middle left header bl0" id="name" onclick="Grid.sort('name')" title="<?php echo $val=$this->translate(array('user','name'));?>"><span><?php echo $val; ?></span></th>
+                            </tr>
+                        </thead>
+                    </table>
+                </td>
+            </tr>
+            <tr class='panel'>
+                <td><?php echo $this->action('list', 'users',null,array('websiteId'=>$this->websiteId));?></td>
+            </tr>
+        </tbody>
+    </table>
+    
+</div>

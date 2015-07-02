@@ -1,0 +1,56 @@
+<?php 
+    $formatting = $this->getHelper('DataFormatting');    
+?>
+<div class="contentPop ml10 mr10 ml20 mt20 w1300" >
+    <form action="descriptions/save" method="POST" id="ajaxForm" onsubmit="Form.submit('ajaxForm');return false;" class="ml20">
+        <input type="hidden" class="textInput w190" name="id" value="<?php echo ($this->club?$this->club['id']:''); ?>"/>
+        <table class="table_edit">
+            <tbody>
+                <tr>
+                    <td>
+                        <label class="pl18" for="clubeName" style=""><?php echo $this->translate(array('in','turnament')).' '.$formatting->markAsRequired(); ?> </label>
+                    </td>
+                    <td>
+                        <select name="turnamentId">
+							<?php
+								foreach($this->turnaments as $key=>$value){
+							?>
+								<option value="<?php echo $value['id']; ?>" <?php echo (isset($this->club['turnament_id']) && $value['id'] == $this->club['turnament_id'])?"selected='selected'":""; ?>><?php echo $value['name']; ?></option>
+							<?php 
+								}
+							?>
+						</select>
+						<input type="hidden" value="<?php echo $this->userId; ?>" name="userId">
+                    </td>
+                    
+                </tr>
+				<tr>
+                    <td>
+                        <label class="pl18" for="clubeName" style=""><?php echo $this->translate(array('description')).' '.$formatting->markAsRequired(); ?> </label>
+                    </td>
+                    <td>
+                        <textarea name="description" ><?php echo ($this->club?$this->club['description']:''); ?></textarea>
+                    </td>
+                    
+                </tr>
+				<tr>
+                    <td>
+                        <label class="pl18" for="clubeName" style=""><?php echo $this->translate(array('stars')).' '.$formatting->markAsRequired(); ?> </label>
+                    </td>
+                    <td>
+                        <select name="stars">
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+						</select>
+                    </td>
+                    
+                </tr>
+               
+            </tbody>
+        </table>
+        <input type="button" class="green mr12 mt8 mb14 mt20" onclick="Form.submit('ajaxForm');" value="<?php echo $this->translate('save');?>" title="<?php echo $this->translate(array('save', 'club'));?>">
+    </form>    
+</div>

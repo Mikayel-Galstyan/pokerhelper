@@ -13,4 +13,5 @@ class Dao_Website extends TF_Dao_Base {
     public function __construct() {
         $this->dbTable = new Dao_DbTable_Website();
     }
+	
 }

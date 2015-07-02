@@ -1,7 +1,81 @@
 <?php $this->setPageTitle('Teeflow - Home'); ?>
 <div class="mt20">
-	<a  id="add_button" class="button_add" onclick="CustomForm.editCourse('website/edit'); Button.disableAdd(); return false;" title="<?php echo $this->translate(array('add', 'new', 'Website')); ?>"><?php echo $this->translate(array('add','website')); ?></a>
+	
 	
 	<div class="pop mt20 w760" id="editPop">
 	</div>
+</div>
+<div class="ml20 mt20 w1300">
+    <div class="mt11">
+        <a  id="add_button" class="button_add" onclick="CustomForm.editCourse('website/edit'); Button.disableAdd(); return false;" title="<?php echo $this->translate(array('add', 'new', 'Website')); ?>"><?php echo $this->translate(array('add','website')); ?></a>
+        <div class="pop mt20 r100"  id="editPop">
+        </div>
+    </div>
+    <table class="mt21 w1165">
+        <tbody>
+            <tr class="head">
+                <td> 
+                    <table class="tlf">
+                        <colgroup>
+                            <col class="w48">
+                            <col class="w120">
+                            <col class="w75">
+                            <col class="">
+                        </colgroup>
+                       <thead class="tlf header_zebra">
+                            <tr>
+                                <th class="middle left" id="" title=""><span></span></th>
+                                <th class="middle left bl0" title="<?php echo $this->translate('edit');?>"><span></span></th>                    
+                                <th class="middle left header bl0 pl32" id="id" onclick="Grid.sort('id')" title="<?php echo $val= $this->translate('id'); ?>"><span><?php echo $val; ?></span></th>
+                                <th class="middle left header bl0" id="name" onclick="Grid.sort('name')" title="<?php echo $val=$this->translate(array('turnament','name'));?>"><span><?php echo $val; ?></span></th>
+                            </tr>
+                        </thead>
+                    </table>
+                </td>
+            </tr>
+            <tr class='panel'>
+                <td>
+					<div class="scroll">
+						<table class="zebra">
+							<colgroup>
+								<col class="w48">
+								<col class="w120">
+								<col class="w75">
+								<col class="">
+							</colgroup>
+							<tbody>
+							<?php 
+							$key = 0;        
+							foreach ($this->items as $item){
+							?>
+							<tr>   
+								<td class="middle left pl13" title="">
+									<input type="checkbox" name="chekbox" id="<?php echo ($id = $this->htmlEscape($item['id']));?>" onclick="removeForm.chekboxChange(this)"/>
+								</td>     
+								<td class="middle right pl13"> 
+									<a href="description" class="ico_edit_polygon mr12" title="<?php echo $this->translate(array('edit','details','of')).' '.$this->htmlEscape($item['name']); ?>"></a>
+								</td>
+								<td class="middle left pl0 center" title="<?php echo ($val = $this->htmlEscape($item['id']));?>"><a href="users/index/websiteId/<?php echo $item['id'];?>" class="mr12" title="<?php echo $this->translate(array('edit','details','of')).' '.$this->htmlEscape($item['name']); ?>"><?php echo $val;?></a></td>
+								<td class="middle left pl0 center" title="<?php echo ($val = $this->htmlEscape($item['name']));?>"> <a href="users/index/websiteId/<?php echo $item['id'];?>" class="mr12" title="<?php echo $this->translate(array('edit','details','of')).' '.$this->htmlEscape($item['name']); ?>"><?php echo $val;?></a></td>
+								<td class="middle left pl0 center" title="<?php echo ($val = $this->htmlEscape($item['name']));?>"> <a href="<?php echo $item['url']; ?>" class="mr12" title="<?php echo $this->translate(array('edit','details','of')).' '.$this->htmlEscape($item['url']); ?>"><?php echo $item['url'];?></a></td>
+								<!--<td class="middle left header br0" title="<?php echo ($val = $this->htmlEscape($item['name']));?>">
+									<a href="description"  class="link"><?php //echo $item['avgStars'];?></a>
+								</td>-->
+							</tr>
+							<?php
+								$key++;
+							} 
+							if($key == 0){?>
+								<tr>
+									<td colspan="13" class="center middle"><?php echo $this->translate('no.record.available');?></td>
+								</tr>
+							<?php }?>
+						   </tbody>
+					   </table>
+					</div>   
+				</td>
+            </tr>
+        </tbody>
+    </table>
+    
 </div>

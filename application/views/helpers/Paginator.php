@@ -18,7 +18,7 @@ class Zend_View_Helper_Paginator extends Zend_View_Helper_Abstract {
      */
     function paginator($params, $count) {
         $limit = $params->getLimit();
-        if ($count > $limit){
+        if ($count > $limit && $count!=0){
             $page = $params->getPage();  
             $controllerName = strtolower(Zend_Controller_Front::getInstance()->getRequest()->getControllerName());              
             $pagination = ($page != 1)?'<span><a href=""onclick="Grid.page('.($page-1).'); return false"><<</a></span>':'';    
